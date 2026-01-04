@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lethesafe – Glossar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="ls-header">
+    <div class="ls-header-inner">
+      <a class="ls-brand" href="index.html">Lethesafe<sup style="font-size:0.35em; opacity:0.6;">&trade;</sup></a>
+      <nav class="ls-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a href="konzept.html">Konzept</a>
+        <a href="werkzeug.html">Werkzeug</a>
+        <a href="bedienung.html">Bedienung</a>
+        <a href="faq.html">FAQ</a>
+        <a href="materialien.html">Materialien</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="ls-longform">
+    <section>
+      <div class="page-label">Lethesafe</div>
+      <h1>Glossar</h1>
+      <p class="page-lead">
+        Dieses Glossar dient als verbindliche Referenz für die in Lethesafe verwendeten Begriffe. Die hier
+        definierten Bedeutungen sind maßgeblich für alle Texte und Werkzeuge.
+      </p>
+    </section>
+
+    <section>
+      <article>
+        <h2>Klonen</h2>
+        <p>
+          Das nachträgliche Erzeugen weiterer Zeitkapseln, die zur exakt gleichen Zielzeichenkette K führen wie eine
+          bestehende
+          Zeitkapsel, jedoch mit neu festgelegten Zeitverzögerungen.
+        </p>
+        <p>
+          Voraussetzung für das Klonen ist, dass die ursprüngliche Zeitkapsel vollständig durchlaufen wurde und die
+          Zielzeichenkette K dadurch vorliegt. Erst danach können weitere Zeitkapseln mit kürzeren oder längeren
+          Zeitverzögerungen erzeugt werden.
+        </p>
+        <p>
+          Klonen ermöglicht auch im Nachgang eine strategische Staffelung von Zugriffsmöglichkeiten (z.&nbsp;B. mehrere
+          Zeitkapseln an unterschiedlichen Orten), ohne die ursprüngliche Zeitkapsel obsolet werden zu lassen oder ein
+          neues K
+          verwenden zu müssen.
+        </p>
+        <p>
+          Für die Erstellung eines Klons ist eine vorhandene, vollständig berechnete Zeitkapsel erforderlich.
+          Der Klonprozess setzt den abgeschlossenen Rechenlauf der Basis-Zeitkapsel voraus und erfordert anschließend
+          einen
+          eigenständigen Rechenlauf entsprechend der für den Klon festgelegten Zeitverzögerung.
+          Ein Aushebeln oder Umgehen bestehender Zeitkapseln ist durch den Klonprozess nicht möglich.
+        </p>
+      </article>
+    </section>
+
+    <section>
+      <article>
+        <h2>Nutzerentropie</h2>
+        <p>Zusätzliche Entropie, die während der Erstellung einer Zeitkapsel durch unvorhersehbare Nutzereingaben
+          erzeugt wird, z. B. durch Mausbewegungen in der Web-Oberfläche oder durch Tastatureingaben im CLI.</p>
+        <p>Nutzerentropie dient ausschließlich der Erhöhung der Zufälligkeit bei der Initialisierung einer Zeitkapsel.
+          Sie hat keinen Einfluss auf die Dauer der Zeitverzögerung, beschleunigt keinen Rechenlauf und ersetzt keine
+          kryptographischen Zufallsquellen des Systems.</p>
+      </article>
+    </section>
+
+    <section>
+      <article>
+        <h2>Startpasswort</h2>
+        <p>Ein optionaler, vom Nutzer gesetzter Faktor, der den Start der zeitverzögerten Berechnung absichert.</p>
+        <p>Das Startpasswort ersetzt K nicht, beschleunigt den Rechenprozess nicht und hat keinen Einfluss auf die Dauer
+          der Zeitverzögerung.</p>
+      </article>
+    </section>
+
+    <section>
+      <article>
+        <h2>K</h2>
+        <p>Siehe <em>Zielzeichenkette&nbsp;K</em>.</p>
+      </article>
+    </section>
+
+    <section>
+      <article>
+        <h2>Vertrauliche Informationen</h2>
+        <p>Daten oder Inhalte, deren Zugriff geschützt werden soll, z. B. Dateien, Dokumente, Passphrasen oder
+          Schlüsselmaterial.</p>
+        <p>Vertrauliche Informationen werden nicht von Lethesafe gespeichert oder verarbeitet, sondern ausschließlich
+          durch externe Verschlüsselungs- oder Zugriffssysteme geschützt.</p>
+      </article>
+    </section>
+
+    <section>
+      <article>
+        <h2>Zeitkapsel</h2>
+        <p>Eine rechnerische Konstruktion, die die Entstehung der Zielzeichenkette K zeitlich verzögert.</p>
+        <p>Eine Zeitkapsel ist kein Speicher, kein Container und enthält zu keinem Zeitpunkt vertrauliche Informationen.
+        </p>
+      </article>
+    </section>
+
+    <section>
+      <article>
+        <h2>Zeitverzögerung / Zeitbarriere</h2>
+        <p>Die bewusst festgelegte Dauer sequenzieller Rechenarbeit, die erforderlich ist, um die Zielzeichenkette K
+          entstehen zu lassen.</p>
+        <p>Die Zeitverzögerung ist unabhängig von Absichten, äußeren Umständen oder Parallelisierung.</p>
+      </article>
+    </section>
+
+    <section>
+      <article>
+        <h2>Zielzeichenkette K</h2>
+        <p>Eine deterministisch erzeugte Zeichenkette, die erst nach Abschluss einer definierten, sequenziellen
+          Rechenarbeit existiert.</p>
+        <p>Die Zielzeichenkette K kann als Masterpasswort oder Schlüsselmaterial für externe Verschlüsselungs- oder
+          Zugriffssysteme verwendet werden. K ist kein vom Nutzer definierter Wert.</p>
+        <p>Lethesafe verzögert ausschließlich die Entstehung von K.</p>
+      </article>
+    </section>
+
+    <section>
+      <article>
+        <h2>Zugriff</h2>
+        <p>Die Möglichkeit, auf vertrauliche Informationen zuzugreifen.</p>
+        <p>Im Kontext von Lethesafe ist Zugriff abhängig von Ort, Zeit und der Verfügbarkeit der Zielzeichenkette K.</p>
+      </article>
+    </section>
+
+  </main>
+
+  <footer class="ls-footer">
+    <nav class="ls-footer-nav">
+      <a href="impressum.html">Impressum &amp; Datenschutz</a>
+    </nav>
+    <p class="ls-footer-note">Verbindliche Angaben stehen im Impressum.</p>
+  </footer>
+</body>
+
+</html>

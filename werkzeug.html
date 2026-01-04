@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lethesafe – Werkzeug</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="ls-header">
+    <div class="ls-header-inner">
+      <a class="ls-brand" href="index.html">Lethesafe<sup style="font-size:0.35em; opacity:0.6;">&trade;</sup></a>
+      <nav class="ls-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a href="konzept.html">Konzept</a>
+        <a href="werkzeug.html" aria-current="page">Werkzeug</a>
+        <a href="bedienung.html">Bedienung</a>
+        <a href="faq.html">FAQ</a>
+        <a href="materialien.html">Materialien</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="ls-longform">
+    <section>
+      <div class="page-label">Lethesafe</div>
+      <h1>Das Werkzeug</h1>
+      <p class="page-lead">
+        Das Werkzeug übersetzt das Konzept in einen überprüfbaren Ablauf. Alles bleibt lokal, nachvollziehbar und unter
+        eigener Kontrolle.
+      </p>
+    </section>
+
+    <section>
+      <h2>Was existiert und in welcher Form</h2>
+      <p>
+        Lethesafe ist kein Dienst und kein Produktpaket. Es besteht aus offenen Werkzeugen, die lokal ausgeführt werden.
+        Sie übersetzen den Gedanken der Zeitkapsel in eine reproduzierbare Praxis: Maker und Unlocker bilden den
+        Kern, flankiert von einer ruhigen Web-Oberfläche und vorbereiteten Arbeiten für künftige Binärversionen.
+      </p>
+      <p>
+        Alle Varianten verfolgen dieselbe Leitlinie: Keine Server, keine Telemetrie, keine externe Abhängigkeit. Der
+        gesamte Ablauf lässt sich auditieren, denn jede Komponente bleibt im eigenen Besitz.
+      </p>
+    </section>
+
+    <section>
+      <h2>Aktuelle Ausprägungen des Werkzeugs</h2>
+
+      <article>
+        <h3>CLI (Maker / Unlocker)</h3>
+        <p>
+          Die Kommandozeilen-Werkzeuge bilden die Referenzimplementierung. Sie liegen als Python-Skripte vor und lassen
+          sich auf jedem System mit einer aktuellen Python-Version ausführen.
+        </p>
+        <p>
+          <strong>Maker</strong> erzeugt eine Zeitkapsel, legt Parameter wie Dauer und Kontext fest und gibt alles an
+          die Person zurück, die sie gestartet hat. <strong>Unlocker</strong> führt später den zeitgebundenen Prozess
+          aus und erzeugt „K“ deterministisch. Beide Skripte arbeiten strikt sequenziell – es gibt keine Abkürzung.
+        </p>
+        <p>
+          Da der Code offenliegt, lässt sich nachvollziehen, wie Wartezeit und Rechenaufwand ineinandergreifen. Die
+          CLI bleibt damit das verlässlichste Werkzeug, um das Konzept zu verstehen und zu auditieren.
+        </p>
+        <div class="materials-links">
+          <a href="../Entwicklung/lethesafe_maker.py">Quellcode ansehen (lethesafe_maker.py)</a>
+          <a href="../Entwicklung/lethesafe_unlocker.py">Quellcode ansehen (lethesafe_unlocker.py)</a>
+        </div>
+      </article>
+
+      <article>
+        <h3>Lokale Web-Version</h3>
+        <p>
+          Zusätzlich existiert eine lokale Web-Oberfläche. Sie läuft ausschließlich auf dem eigenen Rechner, baut auf
+          denselben Routinen wie die CLI auf und stellt die Abläufe in einer ruhigen Darstellung dar – ohne
+          Netzwerkzugriff.
+        </p>
+        <p>
+          Die Web-Version eignet sich für Personen, die ihre Zeitkapseln visuell planen möchten oder mehrere Kapseln im
+          Blick behalten wollen. Auch hier gilt: Die Zeit bestimmt den Zugriff, nicht die Oberfläche.
+        </p>
+        <div class="materials-links">
+          <a href="../lethesafe_web/app.py">Web-Version starten (lokal)</a>
+          <a href="../lethesafe_web/templates/base.html">Oberfläche einsehen</a>
+        </div>
+      </article>
+
+      <article>
+        <h3>Geplante Binärversionen</h3>
+        <p>
+          Für eine spätere Phase sind native Binärversionen vorgesehen. Ziel ist es, den Einstieg auf Windows, Linux und
+          macOS zu vereinfachen, ohne das Prinzip der lokalen Kontrolle aufzugeben.
+        </p>
+        <p>
+          Aktuell existieren Prototypen und Build-Skripte. Sie dienen als Grundlage, um reproduzierbare Pakete zu
+          schaffen, sobald das Projekt ausreichend Stabilität erreicht.
+        </p>
+        <div class="materials-links">
+          <a href="../Onefile-Erstellung-Linux">Arbeitsstand Binärversionen einsehen</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="ls-footer">
+    <nav class="ls-footer-nav">
+      <a href="impressum.html">Impressum &amp; Datenschutz</a>
+    </nav>
+    <p class="ls-footer-note">Bindende Informationen stehen im Impressum.</p>
+  </footer>
+</body>
+
+</html>
