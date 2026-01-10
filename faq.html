@@ -97,12 +97,130 @@
       <details class="ls-faq">
         <summary>Warum gibt es nur ein offizielles Lethesafe?</summary>
         <p>
-          Der Name Lethesafe<sup style="font-size:0.35em; opacity:0.6;">&trade;</sup> kennzeichnet das originale
-          Projekt.
+          Der Name <b>Lethesafe<sup style="font-size:0.35em; opacity:0.6;">&trade;</sup> kennzeichnet das originale
+            Projekt.</b>
           Der Quellcode ist offen, doch offizielle Veröffentlichungen stammen ausschließlich von diesem Projekt. Forks
           sind erlaubt, müssen aber einen eigenen Namen verwenden. Nur so bleibt nachvollziehbar, welche Version einer
           klaren Verantwortung unterliegt.
         </p>
+      </details>
+    </section>
+
+    <section>
+      <details class="ls-faq">
+        <summary>Passwortmanager bieten doch bereits Verzögerungen beim Entschlüsseln. Reicht das nicht aus?</summary>
+        <p>
+          Viele Passwortmanager nutzen <b>absichtliche Verzögerungen</b> beim Entschlüsseln, meist als Teil eines
+          Schlüsselableitungs- oder Schutzmechanismus gegen Brute-Force-Angriffe.</p>
+
+        <p>Diese Verzögerungen dienen dazu, <b>Angriffe zu verlangsamen</b> –<br>nicht dazu, den Zugriff
+          <b>grundsätzlich
+            unmöglich zu machen.</b>
+        </p>
+
+        <p>Lethesafe verfolgt ein anderes Ziel:<br>Es stellt sicher, dass ein benötigter Schlüssel <b>erst zu einem
+            späteren Zeitpunkt überhaupt existiert.</b></p>
+      </details>
+    </section>
+
+    <section>
+      <details class="ls-faq">
+        <summary>Könnte man eine solche Verzögerung in Passwortmanagern nicht einfach sehr groß einstellen?</summary>
+        <p>Eine Verzögerung innerhalb einer Anwendung bleibt immer:</p>
+        <p>
+        <ul class="ls-list framed">
+          <li>Teil derselben Software</li>
+          <li>Teil desselben Prozesses</li>
+          <li>Teil desselben Vertrauensraums</li>
+        </ul>
+        </p>
+        <p>Solche Verzögerungen können prinzipiell:</p>
+        <p>
+        <ul class="ls-list framed">
+          <li>umgangen</li>
+          <li>verändert</li>
+          <li>entfernt</li>
+          <li>durch alternative Implementierungen ersetzt werden</li>
+        </ul>
+        </p>
+        <p>Eine Anwendung kann keine unumkehrbare Regel über ihr eigenes zukünftiges Verhalten erzwingen.</p>
+      </details>
+    </section>
+
+    <section>
+      <details class="ls-faq">
+        <summary>Was ist der grundlegende Unterschied im Sicherheitsmodell?</summary>
+        <p><b>Anwendungsinterne Verzögerung:</b><br>„Der Schlüssel ist vorhanden, aber der Zugriff wird verzögert.“</p>
+        <p><b>Lethesafe:</b><br>„Der Schlüssel existiert noch nicht.“</p>
+        <p>Das ist kein Detail der Benutzeroberfläche, sondern ein <b>grundsätzlich anderes Sicherheitsprinzip.</b></p>
+      </details>
+    </section>
+
+    <section>
+      <details class="ls-faq">
+        <summary>Warum ist „einmal eingestellt“ in Software kein bindender Zustand?</summary>
+        <p>Weil:</p>
+        <p>
+        <ul class="ls-list framed">
+          <li>der Nutzer die Software kontrolliert</li>
+          <li>der Nutzer die Daten kontrolliert</li>
+          <li>der Nutzer das System kontrolliert</li>
+        </ul>
+        </p>
+        <p>Alles, was innerhalb einer Anwendung entschieden wird, bleibt <b>verhandelbar</b> – auch für das eigene
+          zukünftige Ich.</p>
+        <p>Lethesafe verlagert diese Entscheidung <b>aus der Anwendung heraus</b> und bindet sie an einen
+          <b>physikalisch unvermeidbaren, sequenziellen Rechenprozess.</b>
+        </p>
+      </details>
+    </section>
+
+    <section>
+      <details class="ls-faq">
+        <summary>Warum kann eine Integration dieses Modell nicht ersetzen?</summary>
+        <p><b>Integrationen oder Erweiterungen:</b></p>
+        <p>
+        <ul class="ls-list framed">
+          <li>laufen im selben Prozess wie die Anwendung</li>
+          <li>teilen Speicher, Steuerlogik und Ausführungsumgebung</li>
+          <li>bleiben technisch beeinflussbar</li>
+        </ul>
+        </p>
+        <p></p>
+        <p><b>Lethesafe ist:</b></p>
+        <p>
+        <ul class="ls-list framed">
+          <li>ein eigenständiger Rechenprozess</li>
+          <li>ohne verwertbare Zwischenstände oder Abkürzungen</li>
+          <li>ohne alternative Ausführungslogik</li>
+        </ul>
+        </p>
+        <p>Die zeitliche Unvermeidbarkeit entsteht <b>außerhalb</b> der Anwendung.</p>
+      </details>
+    </section>
+
+    <section>
+      <details class="ls-faq">
+        <summary>In welchen Situationen ist dieser Unterschied relevant?</summary>
+        <p>In Situationen wie:</p>
+        <p>
+        <ul class="ls-list framed">
+          <li>Zwang oder Erpressung</li>
+          <li>physischem Zugriff auf Geräte</li>
+          <li>Panik oder Stress</li>
+          <li>bewusster Selbstbeschränkung</li>
+        </ul>
+        </p>
+        <p>In solchen Fällen reicht „Ich dürfte, aber sollte nicht“ nicht aus.</p>
+      </details>
+    </section>
+
+    <section>
+      <details class="ls-faq">
+        <summary>Kann Lethesafe trotzdem mit Passwortmanagern zusammenarbeiten?</summary>
+        <p>Ja unbedingt.</p>
+        <p>Passwortmanager können das Ergebnis eines Lethesafe-Rechenlaufs nutzen. Die zeitliche Sicherheitsgarantie
+          entsteht jedoch immer <b>außerhalb</b> dieser Systeme.</p>
       </details>
     </section>
 
@@ -187,7 +305,7 @@
       <details class="ls-faq">
         <summary>Was passiert, wenn ich mein Startpasswort vergesse oder verliere?</summary>
         <p>
-          Dann kann die Zeitkapsel <b>nicht</b> gestartet werden.</b>
+          Dann kann die Zeitkapsel <b>nicht</b> gestartet werden.
         </p>
         <p>
           Das Startpasswort dient ausschließlich dazu, den Rechenprozess zu aktivieren. Ohne dieses Passwort lässt
@@ -250,15 +368,36 @@
     <section>
       <details class="ls-faq">
         <summary>Brauchen alle Rechner gleich lange, um eine Zeitkapsel zu lösen?</summary>
-        <p>Nein. Die tatsächliche Rechenzeit hängt von der Leistungsfähigkeit des verwendeten Rechners ab. Lethesafe
-          basiert auf einem <b>strikt sequenziellen Rechenprozess,</b> der sich nicht parallelisieren oder
-          überspringen
-          lässt.
+        <p>
+          Nein. Die tatsächliche Rechenzeit hängt von der Leistungsfähigkeit des verwendeten
+          Rechners ab. Lethesafe basiert jedoch auf einem strikt sequenziellen Rechenprozess,
+          der weder parallelisiert noch übersprungen werden kann.
         </p>
-        <p>Die gewählte Zeitverzögerung sollte deshalb immer auf dem vorgesehenen Zielsystem ermittelt oder getestet
-          werden. Für die strategische Platzierung von Zeitkapseln im Sicherheitsmanagement sollte zudem einkalkuliert
-          werden,
-          dass potenter ausgestattete Rechner den Rechenlauf entsprechend schneller durchführen können.</p>
+        <p>
+          Die Berechnung besteht aus einer festen Abfolge voneinander abhängiger Rechenschritte.
+          Jeder Schritt benötigt das Ergebnis des vorherigen und kann erst danach beginnen.
+          Es existiert zu keinem Zeitpunkt mehr als ein gültiger Rechenschritt.
+        </p>
+        <p>
+          Schnellere Hardware verändert lediglich, wie schnell ein einzelner Schritt
+          ausgeführt wird. Die Anzahl der notwendigen Schritte und ihre Reihenfolge bleiben
+          unverändert und vollständig erforderlich.
+        </p>
+        <p>
+          Für die Planung von Zeitkapseln bedeutet das:
+          Die gewählte Dauer sollte nicht am eigenen Rechner orientiert werden, sondern an
+          der Annahme, dass ein Angreifer über sehr leistungsfähige Hardware verfügen könnte.
+        </p>
+        <p>
+          Spezialisierte Hardware wie ASIC-Miner bietet keinen besonderen Vorteil, da
+          Lethesafe keinen Suchraum und keine parallelen Kandidaten besitzt, sondern einen
+          zustandsabhängigen Einzelpfad erzwingt.
+        </p>
+        <p>
+          <b>Merksatz:</b><br>
+          Zeitkapseln werden nicht für den eigenen Rechner gebaut,
+          sondern für den stärksten realistisch denkbaren.
+        </p>
       </details>
     </section>
 
