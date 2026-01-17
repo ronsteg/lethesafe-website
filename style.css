@@ -164,7 +164,7 @@ ul li {
   justify-content: space-between;
   gap: 48px;
   margin: 0;
-  margin-top:48px;
+  margin-top: 48px;
   color: var(--muted);
   font-size: 1rem;
 }
@@ -238,6 +238,7 @@ ul li {
 .flow span {
   text-align: center;
 }
+
 
 .highlight {
   font-weight: 600;
@@ -360,7 +361,7 @@ a[aria-current="page"] {
   font-weight: normal;
   font-size: 0.9em;
   opacity: 0.5;
-    display: block;
+  display: block;
   margin-bottom: 0.8rem;
 }
 
@@ -373,4 +374,24 @@ a[aria-current="page"] {
   color: var(--text);
   letter-spacing: 0.28em;
   text-align: center;
+}
+
+@media (max-width: 940px) {
+  .ls-header-inner {
+    padding: 20px;
+  }
+
+  main {
+    padding: 60px 20px 80px;
+  }
+
+  section {
+    margin-bottom: 72px;
+  }
+
+  .ls-nav {
+    gap: 12px;
+    font-size: 0.8rem;
+  }
+
 }
