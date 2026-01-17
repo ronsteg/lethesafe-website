@@ -9,6 +9,8 @@
     content="Das Werkzeug von Lethesafe übersetzt das konzeptionelle Modell in einen überprüfbaren, deterministischen Ablauf. Die Seite beschreibt Leitlinie und grundlegende Prinzipien der Umsetzung." />
 
   <title>Lethesafe – Werkzeug</title>
+  <link rel="canonical" href="https://lethesafe.org/werkzeug.html">
+  <link rel="alternate" hreflang="de" href="https://lethesafe.org/werkzeug.html">
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -35,6 +37,12 @@
         Das Werkzeug übersetzt das Konzept in einen überprüfbaren Ablauf. Alles bleibt lokal, nachvollziehbar und unter
         eigener Kontrolle.
       </p>
+      <p>
+        Diese Seite beschreibt, welche Werkzeuge existieren und wofür sie gedacht sind.
+        Sie ersetzt keine technische Anleitung und führt nicht Schritt für Schritt durch die Nutzung.
+        Lethesafe versteht sich nicht als „Plug-and-Play“-Produkt, sondern als bewusst eingesetztes Werkzeug.
+      </p>
+
     </section>
 
     <section>
@@ -42,7 +50,7 @@
       <p>
         Lethesafe ist kein Dienst und kein Produktpaket. Es besteht aus offenen Werkzeugen, die lokal ausgeführt werden.
         Sie übersetzen den Gedanken der Zeitkapsel in eine reproduzierbare Praxis: Maker und Unlocker bilden den
-        Kern, flankiert von einer ruhigen Web-Oberfläche und vorbereiteten Arbeiten für künftige Binärversionen.
+        Kern, flankiert von einer ruhigen Web-Oberfläche.
       </p>
       <p>
         Alle Varianten verfolgen dieselbe Leitlinie: Keine Server, keine Telemetrie, keine externe Abhängigkeit. Der
@@ -56,8 +64,14 @@
       <article>
         <h3>CLI (Maker / Unlocker)</h3>
         <p>
-          Die Kommandozeilen-Werkzeuge bilden die Referenzimplementierung. Sie liegen als Python-Skripte vor und lassen
-          sich auf jedem System mit einer aktuellen Python-Version ausführen.
+          Die Kommandozeilen-Werkzeuge bilden die Referenz des Projekts.
+          Sie richten sich an Personen, die bewusst mit lokalen Programmen arbeiten und den Ablauf vollständig
+          nachvollziehen möchten.
+        </p>
+        <p>
+          Die CLI ist kein Komfortwerkzeug. Sie macht sichtbar, was Lethesafe leistet:
+          Zeit wird in einen überprüfbaren, unumgehbaren Prozess übersetzt.
+          Wer das Konzept verstehen oder prüfen möchte, findet hier den direktesten Zugang.
         </p>
         <p>
           <strong>Maker</strong> erzeugt eine Zeitkapsel, legt Parameter wie Dauer und Kontext fest und gibt alles an
@@ -68,44 +82,65 @@
           Da der Code offenliegt, lässt sich nachvollziehen, wie Wartezeit und Rechenaufwand ineinandergreifen. Die
           CLI bleibt damit das verlässlichste Werkzeug, um das Konzept zu verstehen und zu auditieren.
         </p>
-        <div class="materials-links">
-          <a href="../Entwicklung/lethesafe_maker.py">Quellcode ansehen (lethesafe_maker.py)</a>
-          <a href="../Entwicklung/lethesafe_unlocker.py">Quellcode ansehen (lethesafe_unlocker.py)</a>
-        </div>
+        <p>
+          Technische Details, Quellcode und Nutzungshinweise sind im Projektarchiv dokumentiert
+          und werden dort laufend gepflegt.
+        </p>
+
       </article>
 
       <article>
         <h3>Lokale Web-Version</h3>
         <p>
-          Zusätzlich existiert eine lokale Web-Oberfläche. Sie läuft ausschließlich auf dem eigenen Rechner, baut auf
-          denselben Routinen wie die CLI auf und stellt die Abläufe in einer ruhigen Darstellung dar – ohne
-          Netzwerkzugriff.
+          Ergänzend zur CLI existiert eine lokale Web-Oberfläche.
+          Sie läuft ausschließlich auf dem eigenen Rechner und dient der visuellen Planung
+          und Betrachtung von Zeitkapseln.
+        </p>
+        <p>
+          Die Web-Oberfläche ist kein Dienst.
+          Sie nutzt dieselben Routinen wie die Kommandozeile und unterscheidet sich ausschließlich
+          in der Darstellung.
         </p>
         <p>
           Die Web-Version eignet sich für Personen, die ihre Zeitkapseln visuell planen möchten oder mehrere Kapseln im
           Blick behalten wollen. Auch hier gilt: Die Zeit bestimmt den Zugriff, nicht die Oberfläche.
         </p>
-        <div class="materials-links">
-          <a href="../lethesafe_web/app.py">Web-Version starten (lokal)</a>
-          <a href="../lethesafe_web/templates/base.html">Oberfläche einsehen</a>
-        </div>
       </article>
 
       <article>
-        <h3>Geplante Binärversionen</h3>
+        <h3>Vorkompilierte Varianten</h3>
         <p>
-          Für eine spätere Phase sind native Binärversionen vorgesehen. Ziel ist es, den Einstieg auf Windows, Linux und
-          macOS zu vereinfachen, ohne das Prinzip der lokalen Kontrolle aufzugeben.
+          Für einige Einsatzszenarien können vorkompilierte Programme sinnvoll sein,
+          um den lokalen Einsatz zu erleichtern.
+          Entsprechende Varianten sind vorhanden.
         </p>
         <p>
-          Aktuell existieren Prototypen und Build-Skripte. Sie dienen als Grundlage, um reproduzierbare Pakete zu
-          schaffen, sobald das Projekt ausreichend Stabilität erreicht.
+          Lethesafe priorisiert Nachvollziehbarkeit vor Bequemlichkeit.
+          Jede zusätzliche Abstraktion wird daran gemessen, ob sie dieses Prinzip bewahrt.
         </p>
-        <div class="materials-links">
-          <a href="../Onefile-Erstellung-Linux">Arbeitsstand Binärversionen einsehen</a>
-        </div>
+
       </article>
     </section>
+
+    <section>
+      <h2>Einordnung</h2>
+      <p>
+        Lethesafe ist kein Werkzeug für den schnellen Einsatz.
+        Es ist ein bewusstes Mittel für Situationen, in denen Zeit eine sicherheitsrelevante Rolle spielt.
+        Wer diesen Gedanken teilt, findet hier passende Werkzeuge – und die Freiheit, sie eigenständig zu nutzen.
+      </p>
+    </section>
+
+    <section>
+      <div class="cta">
+        <a href="index.html">Start</a> &bull;
+        <a href="konzept.html">Konzept lesen</a> &bull;
+        <a href="werkzeug.html"><b>Werkzeug verstehen</b></a> &bull;
+        <a href="bedienung.html">Bedienung planen</a> &bull;
+        <a href="faq.html">Antworten finden</a>
+      </div>
+    </section>
+
   </main>
 
   <footer class="ls-footer">

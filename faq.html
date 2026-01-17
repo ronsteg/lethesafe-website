@@ -9,6 +9,8 @@
     content="Häufige Fragen zu Lethesafe: Abgrenzung, Startpasswort, Zeitkapseln, Bedrohungsmodelle und Grenzen des Konzepts." />
 
   <title>Lethesafe – FAQ</title>
+  <link rel="canonical" href="https://lethesafe.org/faq.html">
+  <link rel="alternate" hreflang="de" href="https://lethesafe.org/faq.html">
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -67,7 +69,7 @@
           <b>zu
             früh, unter Druck oder gegen den eigenen Willen</b> erfolgt. Lethesafe fügt eine Dimension hinzu, die
           klassische
-          Sicherheitsmodelle nicht kontrollieren können: <b>Zeit.</b>
+          Sicherheitsmodelle nicht kontrollieren können: Zeit.
         </p>
         <p>Darüber hinaus ist es eine individuelle Entscheidung, ob man bei digitalen Informationen dauerhaft einen
           Teil
@@ -79,8 +81,8 @@
           Sicherheitsbaustein
           darstellen.
         </p>
-        <p>Eine Zeitkapsel verhindert nicht den Besitz von Informationen, sondern erzwingt eine <b>unvermeidbare
-            Verzögerung,</b> bevor ein Zugriff überhaupt möglich ist. Sie ergänzt bestehende Sicherungsmaßnahmen,
+        <p>Eine Zeitkapsel verhindert nicht den Besitz von Informationen, sondern erzwingt eine unvermeidbare
+          Verzögerung, bevor ein Zugriff überhaupt möglich ist. Sie <b>ergänzt</b> bestehende Sicherungsmaßnahmen,
           ersetzt sie
           aber nicht.</p>
       </details>
@@ -380,27 +382,37 @@
         <p>
           Die Berechnung besteht aus einer festen Abfolge voneinander abhängiger Rechenschritte.
           Jeder Schritt benötigt das Ergebnis des vorherigen und kann erst danach beginnen.
-          Es existiert zu keinem Zeitpunkt mehr als ein gültiger Rechenschritt.
+          Zu keinem Zeitpunkt existieren parallele Kandidaten oder alternative Rechenpfade.
         </p>
         <p>
-          Schnellere Hardware verändert lediglich, wie schnell ein einzelner Schritt
-          ausgeführt wird. Die Anzahl der notwendigen Schritte und ihre Reihenfolge bleiben
-          unverändert und vollständig erforderlich.
+          Leistungsfähigere Hardware verändert daher ausschließlich, wie schnell ein einzelner
+          Schritt ausgeführt wird. Die Anzahl der erforderlichen Schritte und ihre Reihenfolge
+          bleiben unverändert und vollständig notwendig.
         </p>
         <p>
           Für die Planung von Zeitkapseln bedeutet das:
-          Die gewählte Dauer sollte nicht am eigenen Rechner orientiert werden, sondern an
-          der Annahme, dass ein Angreifer über sehr leistungsfähige Hardware verfügen könnte.
+          Die gewünschte Verzögerung wird zunächst als Zeitdauer festgelegt
+          (z. B. Tage oder Wochen).
+          Diese Zeitdauer muss anschließend unter einer bewusst konservativen Annahme über
+          verfügbare Rechenleistung umgesetzt werden.
         </p>
         <p>
-          Spezialisierte Hardware wie ASIC-Miner bietet keinen besonderen Vorteil, da
-          Lethesafe keinen Suchraum und keine parallelen Kandidaten besitzt, sondern einen
-          zustandsabhängigen Einzelpfad erzwingt.
+          Welche Rechenleistung dabei zugrunde gelegt wird, kann nicht objektiv vorgegeben werden.
+          Sie stellt vielmehr eine bewusste Sicherheitsannahme dar.
+          Lethesafe liefert kein Maß für „ausreichende“ Hardware, sondern ein Werkzeug,
+          um eine getroffene Annahme technisch konsequent durchzusetzen.
+        </p>
+        <p>
+          Spezialisierte Hardware wie ASIC-Miner bietet dabei keinen strukturellen Vorteil,
+          da Lethesafe keinen Suchraum und keine parallelen Kandidaten besitzt,
+          sondern einen zustandsabhängigen Einzelpfad erzwingt.
+          Die häufig aufkommende Frage nach Quantencomputern wird im Abschnitt
+          ›Bedrohungsmodelle & Realität‹ eingeordnet.
         </p>
         <p>
           <b>Merksatz:</b><br>
-          Zeitkapseln werden nicht für den eigenen Rechner gebaut,
-          sondern für den stärksten realistisch denkbaren.
+          Zeitkapseln definieren eine gewünschte Verzögerung
+          und setzen sie unter bewusst gewählten Annahmen über Rechenleistung um.
         </p>
       </details>
     </section>
@@ -662,6 +674,17 @@
         </p>
       </details>
     </section>
+
+    <section>
+      <div class="cta">
+        <a href="index.html">Start</a> &bull;
+        <a href="konzept.html">Konzept lesen</a> &bull;
+        <a href="werkzeug.html">Werkzeug verstehen</a> &bull;
+        <a href="bedienung.html">Bedienung planen</a> &bull;
+        <a href="faq.html"><b>Antworten finden</b></a>
+      </div>
+    </section>
+
   </main>
 
   <footer class="ls-footer">
