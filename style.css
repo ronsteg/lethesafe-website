@@ -163,21 +163,32 @@ ul li {
   align-items: center;
   justify-content: space-between;
   gap: 48px;
-  margin: 0;
-  margin-top: 48px;
+  margin: 64px auto 8px;
   color: var(--muted);
   font-size: 1rem;
-}
-
-.timeline-explainer {
-  padding-top: 40px;
-  text-align: center;
+  max-width: 860px;
 }
 
 .timeline .line {
-  flex: 1 1 30%;
+  flex: 1 1 100%;
   height: 1px;
   background: var(--accent);
+}
+
+.timeline-label {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  letter-spacing: 0.3em;
+}
+
+.list-inline {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.85rem;
+  color: var(--muted);
 }
 
 .section-title {
@@ -239,6 +250,11 @@ ul li {
   text-align: center;
 }
 
+.flow .focus {
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+}
 
 .highlight {
   font-weight: 600;
@@ -258,6 +274,18 @@ ul li {
   color: var(--accent);
   letter-spacing: 0.08em;
   margin-top: 32px;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.status-item {
+  border-top: 1px solid rgba(123, 145, 181, 0.5);
+  padding-top: 12px;
+  font-size: 0.95rem;
 }
 
 .cta {
@@ -286,6 +314,11 @@ ul li {
   letter-spacing: 0.04em;
 }
 
+.ls-placeholder {
+  max-width: 64ch;
+  font-size: 1.05rem;
+}
+
 .page-label {
   font-size: 0.85rem;
   letter-spacing: 0.2em;
@@ -296,6 +329,26 @@ ul li {
 
 .ls-longform {
   max-width: 900px;
+}
+
+.konzept-timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 48px auto 32px;
+}
+
+.konzept-timeline svg {
+  width: 100%;
+  max-width: 700px;
+  height: 24px;
+}
+
+.konzept-timeline span {
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .konzept-section h2 {
@@ -339,11 +392,28 @@ a[aria-current="page"] {
   color: var(--muted);
 }
 
+.ls-footer-meta {
+  opacity: 0.7;
+}
+
 .ls-footer-note {
   margin: 0;
   font-size: 0.85rem;
   letter-spacing: 0.05em;
   color: var(--muted);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 32px;
+}
+
+.back-link::before {
+  content: "←";
 }
 
 .ls-list {
@@ -361,13 +431,27 @@ a[aria-current="page"] {
   font-weight: normal;
   font-size: 0.9em;
   opacity: 0.5;
-  display: block;
+    display: block;
   margin-bottom: 0.8rem;
 }
 
 .ls-faq[open] summary::after {
   content: "";
   margin-bottom: 1rem;
+}
+
+.ls-faq-block-label {
+  margin: 2.5rem 0 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+/* visuelle Klammer */
+.ls-list.framed {
+  border-left: 2px solid rgba(0, 0, 0, 0.15);
+  padding-left: 1.2rem;
+  color: var(--muted);
 }
 
 .core {

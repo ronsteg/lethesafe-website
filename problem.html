@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description"
+    content="Grundlegender Problemaufriss zur fehlenden Sicherheitsdistanz zwischen Kenntnis und Zugriff in digitalen Sicherheitssystemen." />
+
+  <title>Zugriff ohne Zeit ist ein Sicherheitsfehler – Lethesafe</title>
+  <link rel="canonical" href="https://lethesafe.org/problem.html">
+  <link rel="alternate" hreflang="de" href="https://lethesafe.org/problem.html">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="ls-header">
+    <div class="ls-header-inner">
+      <a class="ls-brand" href="index.html">Lethesafe<sup style="font-size:0.35em; opacity:0.6;">&trade;</sup></a>
+      <nav class="ls-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a href="problem.html" aria-current="page">Problem</a>
+        <a href="konzept.html">Konzept</a>
+        <a href="werkzeug.html">Werkzeug</a>
+        <a href="bedienung.html">Bedienung</a>
+        <a href="faq.html">FAQ</a>
+        <a href="materialien.html">Materialien</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="ls-longform">
+    <section>
+      <div class="page-label">Lethesafe</div>
+      <h1>Zugriff ohne Distanz ist ein Sicherheitsfehler"</h1>
+    </section>
+
+    <section>
+      <h2>Ein unterschätztes Grundproblem moderner Zugriffssysteme</h2>
+      <p>
+        Digitale Sicherheitssysteme gehen fast durchgängig von einer stillschweigenden Annahme aus:
+        <strong>Sobald ein Geheimnis bekannt ist, darf Zugriff erfolgen.</strong>
+      </p>
+      <p>
+        Zwischen der Kenntnis eines Geheimnisses und seiner Verwendung existiert in der Regel
+        <strong>keine Sicherheitsdistanz</strong>.
+        Wer weiß, kann handeln.
+      </p>
+      <p>
+        Diese unmittelbare Kopplung von Wissen und Zugriff ist kein Zufall, sondern ein grundlegendes
+        Konstruktionsmerkmal moderner Zugriffssysteme.
+        Sie wird selten explizit benannt – und noch seltener hinterfragt.
+      </p>
+      <p>
+        Genau darin liegt ein strukturelles Sicherheitsproblem.
+      </p>
+    </section>
+
+    <section>
+      <h2>Wissen ist kein freiwilliger Zustand</h2>
+      <p>
+        Die meisten Schutzmechanismen setzen implizit voraus, dass Geheimnisse freiwillig preisgegeben werden.
+        Die Realität weicht davon häufig ab.
+      </p>
+      <p>Wissen kann entstehen unter Bedingungen wie:</p>
+      <ul class="ls-list framed">
+        <li>physischem oder psychischem Zwang</li>
+        <li>Erpressung</li>
+        <li>Nötigung</li>
+        <li>sozialer Manipulation</li>
+        <li>Stress, Krankheit oder Ausnahmesituationen</li>
+      </ul>
+      <p>
+        In all diesen Fällen ist die Kenntnis eines Geheimnisses <strong>nicht kontrollierbar</strong>.
+        Sobald sie existiert, wird sie wirksam.
+      </p>
+      <p>
+        Ohne eine vermittelnde Distanz zwischen Wissen und Zugriff kollabieren klassische
+        Sicherheitsannahmen genau in dem Moment, in dem sie gebraucht würden.
+      </p>
+
+    </section>
+
+    <section>
+      <h2>Die unmittelbare Kopplung von Wissen und Zugriff</h2>
+      <p>
+        Passwörter, Schlüsseldateien, Recovery-Seeds oder Entschlüsselungsphrasen sind so gestaltet,
+        dass ihre Kenntnis <strong>direkt und ohne vermittelnde Barriere</strong> zur Nutzung führt.
+      </p>
+      <p>
+        Diese Gestaltung ist funktional, effizient und in normalen Nutzungsszenarien unproblematisch.
+        Unter Zwang jedoch wird sie zur Schwachstelle.
+      </p>
+      <p>In solchen Situationen kennen Sicherheitssysteme nur zwei Zustände:</p>
+      <ul class="ls-list framed">
+        <li>Zugriff erlaubt</li>
+        <li>Zugriff verweigert</li>
+      </ul>
+      <p>
+        Ein Zwischenzustand existiert nicht.
+      </p>
+    </section>
+
+    <section>
+      <h2>Das eigentliche Defizit: fehlende Distanz</h2>
+      <p>
+        Was fehlt, ist kein zusätzlicher Faktor im engeren Sinn,
+        sondern <strong>eine Distanz zwischen Kenntnis und Handlung</strong>.
+      </p>
+      <p>
+        Eine solche Distanz würde bedeuten:
+      </p>
+      <p>
+        <em>Zugriff ist prinzipiell möglich – aber nicht unmittelbar.</em>
+      </p>
+      <p>
+        Ohne diese Distanz gibt es keinen Schutz gegen erzwungenen Sofortzugriff.
+        Sicherheitsmechanismen verlieren ihre Wirkung genau in dem Moment,
+        in dem Wissen nicht mehr freiwillig ist.
+      </p>
+    </section>
+
+    <section>
+      <h2>Warum zusätzliche Authentifizierung das Problem nicht löst</h2>
+      <p>
+        Mehrfaktor-Authentifizierung, Hardware-Token oder biometrische Verfahren verändern
+        an diesem Grundproblem wenig:
+      </p>
+      <ul class="ls-list framed">
+        <li>Auch sie setzen auf unmittelbare Verfügbarkeit</li>
+        <li>Auch sie lassen sich unter Zwang auslösen</li>
+        <li>Auch sie schaffen keine eigenständige Sicherheitsdistanz</li>
+      </ul>
+      <p>
+        Sie erhöhen die Hürde, <strong>nicht</strong> die strukturelle Trennung
+        zwischen Wissen und Zugriff.
+      </p>
+    </section>
+
+    <section>
+      <h2>Zeit als eine mögliche Form von Distanz</h2>
+      <p>
+        Eine mögliche Ausprägung dieser fehlenden Distanz ist <strong>Zeit</strong>.
+      </p>
+      <p>
+        Zeit ist keine Komfortfunktion und kein Zusatzmechanismus.
+        Als Sicherheitsdimension bewirkt sie etwas grundlegend anderes:
+      </p>
+      <ul class="ls-list framed">
+        <li>Zugriff wird verzögert, nicht verhindert</li>
+        <li>Zwang verliert seine unmittelbare Wirksamkeit</li>
+        <li>Handlung wird an einen unvermeidbaren Aufwand gekoppelt</li>
+      </ul>
+      <p>
+        Damit entsteht erstmals ein Schutzraum zwischen Kenntnis und Zugriff,
+        der nicht auf Vertrauen oder Freiwilligkeit angewiesen ist.
+      </p>
+    </section>
+
+    <section>
+      <h2>Ein konkreter Ansatz</h2>
+      <p>
+        Diese Sicherheitsthematik wird bislang kaum systematisch adressiert.
+        Insbesondere existieren kaum allgemein nutzbare Systeme, die Zugriff
+        nicht allein an Wissen koppeln, sondern an eine
+        <strong>zwingende Distanz</strong> zwischen Kenntnis und Nutzung.
+      </p>
+      <p>
+        <strong>Lethesafe</strong> setzt genau an diesem Punkt an.
+      </p>
+      <p>
+        Das Projekt beschreibt und implementiert einen Ansatz,
+        bei dem Zugriff nicht durch die bloße Kenntnis eines Geheimnisses bestimmt wird,
+        sondern durch das Durchlaufen einer
+        <strong>unvermeidbaren Distanz in Form sequenzieller Rechenarbeit</strong>.
+      </p>
+      <p>
+        Diese Distanz basiert auf Zeit, ist überprüfbar und kann nicht übersprungen
+        oder parallelisiert werden.
+      </p>
+
+    </section>
+
+
+    <section>
+      <h2>Zusammenfassung</h2>
+      <p>
+        <strong>
+          Sicherheit ohne Distanz ist fragil.<br />
+          Sobald Wissen unmittelbaren Zugriff erlaubt, existiert kein Schutz gegen Zwang.
+        </strong>
+      </p>
+      <p>
+        Distanz ist kein Zusatz.<br />
+        Distanz ist eine fehlende Sicherheitsdimension.
+      </p>
+      <p>
+        Zeit ist eine mögliche Form davon.
+      </p>
+    </section>
+
+    <section>
+      <div class="cta">
+        <a href="index.html">Start</a> &bull;
+        <a href="problem.html"><b>Problem erkennen</b></a> &bull;
+        <a href="konzept.html">Konzept lesen</a> &bull;
+        <a href="werkzeug.html">Werkzeug verstehen</a> &bull;
+        <a href="bedienung.html">Bedienung planen</a> &bull;
+        <a href="faq.html">Antworten finden</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="ls-footer">
+    <nav class="ls-footer-nav">
+      <a href="impressum.html">Impressum &amp; Datenschutz</a>
+    </nav>
+    <p class="ls-footer-note">Verbindliche Angaben finden sich im Impressum.</p>
+  </footer>
+</body>
+
+</html>
