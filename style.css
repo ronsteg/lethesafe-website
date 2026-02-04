@@ -200,6 +200,36 @@ ul li {
   text-transform: uppercase;
 }
 
+.manifest-figure {
+  margin-top: 96px;
+  margin-bottom: 96px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 620px;
+}
+
+.manifest-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.manifest-figure.manifest-isolated {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.manifest-figure.manifest-isolated img {
+  max-width: 620px;
+  width: 100%;
+  height: auto;
+}
+
+p.manifest-break {
+  margin-bottom: 4rem !important;
+}
+
 .problem-text,
 .page-lead {
   font-size: 1.05rem;
@@ -298,7 +328,7 @@ ul li {
 }
 
 .cta a {
-  color: var(--accent);
+  color: var(--text);
   letter-spacing: 0.1em;
 }
 
@@ -382,6 +412,33 @@ a[aria-current="page"] {
   font-size: 0.85rem;
 }
 
+.ls-symbol-mark {
+  display: block;
+  height: auto;
+  line-height: 0;
+  fill: currentColor;
+}
+
+.ls-symbol-footer-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.ls-symbol-footer {
+  width: 23px;
+  opacity: 0.6;
+}
+
+.ls-symbol-divider {
+  width: 36px;
+  display: block;
+  margin: 72px auto;
+  opacity: 0.6;
+}
 
 .ls-footer-nav {
   justify-self: center;
@@ -448,7 +505,7 @@ a[aria-current="page"] {
   font-weight: normal;
   font-size: 0.9em;
   opacity: 0.5;
-    display: block;
+  display: block;
   margin-bottom: 0.8rem;
 }
 
@@ -468,7 +525,7 @@ a[aria-current="page"] {
 .ls-list.framed {
   border-left: 2px solid rgba(0, 0, 0, 0.15);
   padding-left: 1.2rem;
-  color: var(--muted);
+  color: var(--text);
 }
 
 .core {
@@ -494,5 +551,24 @@ a[aria-current="page"] {
     gap: 12px;
     font-size: 0.8rem;
   }
+}
 
+@media (max-width: 640px) {
+  .ls-footer-row {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 16px;
+    text-align: center;
+  }
+
+  .ls-footer-note,
+  .ls-footer-nav,
+  .ls-footer-kontakt,
+  .ls-symbol-footer-wrap {
+    justify-self: center;
+  }
+
+  .ls-footer {
+    padding-top: 48px;
+  }
 }

@@ -21,7 +21,7 @@
       <nav class="ls-nav" aria-label="Hauptnavigation">
         <a href="index.html">Start</a>
         <a href="problem.html">Problem</a>
-        <a href="konzept.html">Konzept</a>
+        <a href="manifest.html">Manifest</a>
         <a href="werkzeug.html">Werkzeug</a>
         <a href="bedienung.html">Bedienung</a>
         <a href="faq.html" aria-current="page">FAQ</a>
@@ -157,7 +157,8 @@
     <section>
       <details class="ls-faq">
         <summary>Was ist der grundlegende Unterschied im Sicherheitsmodell?</summary>
-        <p><b>Anwendungsinterne Verzögerung:</b><br>„Der Schlüssel ist vorhanden, aber der Zugriff wird verzögert.“</p>
+        <p><b>Anwendungsinterne Verzögerung:</b><br>„Der Schlüssel ist vorhanden, aber der Zugriff wird verzögert.“<br>
+          Die Kenntnis des Schlüssels besteht in diesem Modell bereits und bleibt handlungsrelevant.</p>
         <p><b>Lethesafe:</b><br>„Der Schlüssel existiert noch nicht.“</p>
         <p>Das ist kein Detail der Benutzeroberfläche, sondern ein <b>grundsätzlich anderes Sicherheitsprinzip.</b></p>
       </details>
@@ -422,17 +423,30 @@
       <details class="ls-faq">
         <summary>Wird eine Zeitkapsel auf sehr leistungsfähigen Rechnern oder in der Cloud deutlich schneller gelöst?
         </summary>
-        <p>Auch auf sehr leistungsfähigen Rechnern oder in Cloud-Umgebungen bleibt der notwendige Rechenaufwand in
-          derselben Größenordnung wie auf moderner Alltags-Hardware.</p>
-        <p>Lethesafe ist bewusst so konzipiert, dass zusätzliche Rechenressourcen keinen strukturellen Vorteil bringen.
-          Der zugrunde liegende Rechenprozess ist streng sequentiell und lässt sich weder sinnvoll parallelisieren noch
-          durch spezialisierte Hardware abkürzen.</p>
-        <p>In der Praxis können sich Laufzeiten moderat unterscheiden, die grundlegende Zeitdimension bleibt jedoch
-          erhalten. Eine Zeitkapsel, die auf einem Rechner Tage oder Wochen benötigt, lässt sich nicht auf Minuten oder
-          Stunden „verkürzen“, nur weil leistungsfähigere Hardware eingesetzt wird.</p>
-        <p>Genau diese Eigenschaft ist ein zentraler Bestandteil des Sicherheits- und Planungsmodells von Lethesafe.</p>
+        <p>
+          Die tatsächliche Laufzeit einer Zeitkapsel hängt von der Leistungsfähigkeit
+          der eingesetzten Hardware ab und kann zwischen verschiedenen Systemen variieren.
+        </p>
+        <p>
+          Lethesafe ist jedoch bewusst so konzipiert, dass zusätzliche Rechenressourcen
+          keinen <b>strukturellen Vorteil</b> bringen.
+          Der zugrunde liegende Rechenprozess ist strikt sequentiell aufgebaut
+          und erzwingt einen festen, zustandsabhängigen Rechenpfad,
+          der weder parallelisiert noch übersprungen werden kann.
+        </p>
+        <p>
+          Leistungsfähigere Hardware kann einzelne Rechenschritte schneller ausführen,
+          verändert jedoch weder die Anzahl noch die Reihenfolge der erforderlichen Schritte.
+          Dadurch bleibt die geplante Zeitverzögerung grundsätzlich erhalten,
+          auch wenn reale Laufzeiten moderat variieren können.
+        </p>
+        <p>
+          Diese Eigenschaft ist ein zentraler Bestandteil des Sicherheits-
+          und Planungsmodells von Lethesafe.
+        </p>
       </details>
     </section>
+
 
     <section>
       <details class="ls-faq">
@@ -458,11 +472,19 @@
       <details class="ls-faq">
         <summary>Kann man eine Zeitkapsel schnell erzeugen – unabhängig von der gewünschten Zeitdauer?</summary>
         <p>Nein. Und genau das ist beabsichtigt.</p>
-        <p>Eine Zeitkapsel lässt sich nicht „vorberechnen“, komprimieren oder beschleunigt erzeugen. Jede Minute
-          Zeitverzögerung muss real gerechnet werden – sowohl bei der Erstellung als auch bei der späteren Auflösung.
+        <p>
+          Eine Zeitkapsel lässt sich nicht „vorberechnen“, komprimieren
+          oder strukturell abgekürzt erzeugen.
+          Der für die gewünschte Verzögerung festgelegte Rechenaufwand
+          muss vollständig durchlaufen werden –
+          sowohl bei der Erstellung als auch bei der späteren Auflösung.
         </p>
-        <p><b>Wäre eine schnelle Erstellung möglich, ließe sich der zugrunde liegende Aufwand auch später umgehen.</b>
-          Lethesafe verhindert das, indem es denselben unvermeidbaren Rechenweg erzwingt.</p>
+        <p>
+          <b>Wäre eine schnelle Erstellung möglich, ließe sich der zugrunde liegende
+            Aufwand auch später umgehen.</b>
+          Lethesafe verhindert das, indem es denselben
+          unvermeidbaren, strikt sequenziellen Rechenpfad erzwingt.
+        </p>
       </details>
     </section>
 
@@ -554,68 +576,132 @@
     </section>
 
     <section>
+      <details class="ls-faq">
+        <summary>
+          Kann eine Zeitkapsel unabhängig von digitalen Datenträgern gesichert werden?
+        </summary>
+        <p>
+          Prinzipiell ja. Eine Zeitkapsel besteht ausschließlich aus strukturiertem Text
+          (JSON mit Base64- und Hex-Werten).
+        </p>
+        <p>
+          Wird dieser Text vollständig und unverändert wieder digitalisiert,
+          ist die Zeitkapsel identisch – unabhängig davon,
+          auf welchem Medium sie zuvor gespeichert oder archiviert war.
+        </p>
+        <p>
+          Das Medium ist dabei unerheblich.
+          Entscheidend ist allein die exakte Zeichenfolge.
+        </p>
+        <p>
+          Mögliche Risiken liegen nicht in der Kryptografie,
+          sondern in praktischen Faktoren wie Abschreibfehlern
+          oder physischem Verlust.
+        </p>
+      </details>
+    </section>
+    
+
+    <section>
       <h2>Bedrohungsmodelle & Realität</h2>
+    </section>
+
+    <section>
+      <details class="ls-faq">
+        <summary>Bezieht sich Lethesafe auf klassische RSA-basierte Time-Lock-Puzzles?</summary>
+        <p>
+          Nein. Lethesafe implementiert kein RSA-basiertes Time-Lock-Puzzle
+          nach Rivest–Shamir–Wagner.
+          Der zugrunde liegende Rechenprozess besteht aus einem strikt
+          sequenziellen, zustandsabhängigen Pfad ohne Suchraum.
+        </p>
+        <p>
+          Aussagen zu Faktorisierung, Shor-Algorithmus oder RSA-Abkürzungen
+          sind daher nicht anwendbar.
+        </p>
+      </details>
+    </section>
+
+    <section>
+      <details class="ls-faq">
+        <summary>Hilft Parallelisierung „über mehrere Instanzen“ dabei, eine Zeitkapsel schneller zu lösen?</summary>
+        <p>
+          Nein. Mehrere Instanzen erhöhen nur den <b>Durchsatz</b>, nicht die
+          <b>Geschwindigkeit</b> einer einzelnen Zeitkapsel.
+        </p>
+        <p>
+          Eine einzelne Zeitkapsel erzwingt einen strikt sequenziellen Rechenpfad:
+          Jeder Schritt benötigt das Ergebnis des vorherigen.
+          Dieser Pfad lässt sich nicht aufteilen, nicht abkürzen und nicht
+          „mit mehr Kernen“ parallel schneller durchlaufen.
+        </p>
+        <p>
+          Mehrere Kopien derselben Zeitkapsel können zwar gleichzeitig gerechnet
+          werden, aber keine davon liefert das Ergebnis früher als eine einzelne
+          Instanz auf vergleichbarer Hardware.
+        </p>
+      </details>
     </section>
 
     <section>
       <details class="ls-faq">
         <summary>Wie verhält sich Lethesafe in Erpressungs- oder Zwangsszenarien?</summary>
         <p>
-          Eine laufende Zeitkapsel liefert kein Ergebnis, bevor die definierte Wartezeit endet. Wer unter Druck steht,
-          kann glaubhaft darauf verweisen, dass es kein Passwort gibt, das herausgegeben werden könnte. Lethesafe löst
-          diese Situationen nicht vollständig, <b>schafft aber eine klare und überprüfbare Grenze.</b>
+          Eine laufende Zeitkapsel liefert kein Ergebnis, bevor die definierte
+          Wartezeit endet.
+          Wer unter Druck steht, kann glaubhaft darauf verweisen, dass es kein
+          Passwort gibt, das herausgegeben werden könnte.
+        </p>
+        <p>
+          Lethesafe löst solche Situationen nicht vollständig,
+          schafft aber eine klare und überprüfbare zeitliche Grenze.
         </p>
       </details>
     </section>
 
     <section>
       <details class="ls-faq">
-        <summary>Was bringt mir Lethesafe, wenn ein Angreifer mir alles abnimmt – inklusive Zeitkapsel und
-          Startpasswort –
-          und verschwindet?</summary>
-        <p>Auch in diesem Szenario bleibt der unmittelbare Zugriff auf vertrauliche Informationen blockiert.</p>
-        <p>Selbst wenn eine Zeitkapsel zusammen mit dem Startpasswort herausgegeben wird, entsteht das Ergebnis
-          <b>erst
-            nach Ablauf der festgelegten Zeit.</b> Diese Zeit ist nicht verhandelbar, nicht überspringbar und nicht
-          beschleunigbar.
+        <summary>
+          Was bringt mir Lethesafe, wenn ein Angreifer mir alles abnimmt –
+          inklusive Zeitkapsel und Startpasswort – und verschwindet?
+        </summary>
+        <p>
+          Auch in diesem Szenario bleibt der unmittelbare Zugriff auf
+          vertrauliche Informationen blockiert.
         </p>
-        <p>Der entscheidende Wert liegt nicht darin, einen Zugriff für immer zu verhindern, sondern
-          <b>Handlungsspielraum zu gewinnen.</b>
+        <p>
+          Selbst wenn eine Zeitkapsel zusammen mit dem Startpasswort
+          herausgegeben wird, entsteht das Ergebnis erst nach Ablauf
+          der festgelegten Zeit.
+          Diese Zeit ist nicht verhandelbar, nicht überspringbar
+          und nicht strukturell abkürzbar.
         </p>
-        <p>Zeit ermöglicht es, nach einem Angriff:</p>
-        <ul class="ls-list framed">
-          <li>selbst auf gesicherte Kopien an anderen Orten zuzugreifen,</li>
-          <li>Passwörter zu ändern oder Zugänge zu sperren,</li>
-          <li>Systeme zu deaktivieren oder neu zu strukturieren,</li>
-          <li>oder den Nutzen der erpressten Informationen zu reduzieren.</li>
-        </ul>
-        <p>Lethesafe ist deshalb kein einzelnes Schutzschild, sondern ein <b>Baustein in einem abgestuften
-            Sicherheitskonzept.</b> In vielen Szenarien wird die Zielzeichenkette K bewusst nur als Teil eines
-          größeren
-          Passworts oder Schlüssels verwendet, um zusätzliche Abhängigkeiten zu schaffen.</p>
+        <p>
+          Der entscheidende Wert liegt nicht darin, einen Zugriff
+          für immer zu verhindern, sondern Handlungsspielraum zu gewinnen.
+        </p>
       </details>
     </section>
 
     <section>
       <details class="ls-faq">
         <summary>Werden Quantencomputer Zeitkapseln schneller lösen können?</summary>
-        <p>Nach heutigem Kenntnisstand: nein.</p>
-        <p>Lethesafe nutzt keine kryptographischen Probleme, die durch bekannte Quantenalgorithmen beschleunigt werden
-          können. Der zugrunde liegende Rechenprozess ist sequenziell aufgebaut und erfordert eine feste Abfolge von
-          Schritten.</p>
-        <p>Quantencomputer bieten Vorteile bei bestimmten mathematischen Problemklassen, nicht jedoch bei strikt
-          linearen Hash-Folgen. Es gibt derzeit keinen bekannten Ansatz, der es erlauben würde, eine
-          Lethesafe-Zeitkapsel signifikant schneller zu durchlaufen.</p>
-        <p>Unabhängig davon ist Lethesafe kein Versprechen für alle Zeiten, sondern ein Werkzeug auf Basis heutiger,
-          <b>nachvollziehbarer physikalischer Annahmen</b> – transparent und überprüfbar.
+        <p>
+          Nach heutigem Kenntnisstand gibt es keinen bekannten Ansatz,
+          der es erlauben würde, eine Lethesafe-Zeitkapsel strukturell
+          schneller zu durchlaufen.
         </p>
-        <p>Die langfristige Schwachstelle liegt nicht bei Lethesafe selbst, sondern bei den Systemen,
-          in denen die eigentlichen vertraulichen Informationen gespeichert sind. Passwortmanager,
-          Verschlüsselungsprogramme oder Archivformate könnten durch zukünftige kryptographische Durchbrüche betroffen
-          sein – unabhängig davon, wie der Zugriff darauf zeitlich verzögert wurde. Lethesafe schützt nicht den Inhalt
-          dieser Systeme, sondern kontrolliert den Zeitpunkt, zu dem ein Zugriff überhaupt möglich wird.</p>
+        <p>
+          Lethesafe ist kein Versprechen für alle Zeiten,
+          sondern ein Werkzeug auf Basis nachvollziehbarer
+          heutiger Annahmen.
+          Die langfristige Schwachstelle liegt nicht im
+          Zeitmechanismus selbst, sondern in den Systemen,
+          die die eigentlichen Informationen speichern.
+        </p>
       </details>
     </section>
+
 
     <section>
       <h2>Prinzipien & Grenzen</h2>
@@ -680,15 +766,14 @@
         <summary>Was kostet Lethesafe?</summary>
         <p>Lethesafe ist kein Dienst und kein Abonnement.</p>
         <p>Die Software wird lokal ausgeführt und kann unabhängig von einer zentralen Infrastruktur genutzt werden. Es
-          gibt keine laufenden Kosten, keine Konten und keine nutzungsabhängigen Gebühren.</p>
-        <p>Eventuelle Kosten entstehen ausschließlich durch:</p>
-        <p>
+          gibt
+          keine laufenden Kosten, keine Konten und keine nutzungsabhängigen Gebühren.</p>
+        <p>Kosten entstehen ausschließlich durch:</p>
         <ul class="ls-list framed">
           <li>die eigene Hardware,</li>
-          <li>den Stromverbrauch während des Rechenlaufs,</li>
-          <li>oder optionale Begleitangebote wie Dokumentation, Support oder spezialisierte Builds.</li>
+          <li>den Stromverbrauch während des Rechenlaufs.</li>
         </ul>
-        </p>
+        <p>Derzeit werden keine kostenpflichtigen Leistungen, Zusatzangebote oder kommerziellen Dienste angeboten.</p>
       </details>
     </section>
 
@@ -696,10 +781,10 @@
       <div class="cta">
         <a href="index.html">Start</a> &bull;
         <a href="problem.html">Problem erkennen</a> &bull;
-        <a href="konzept.html">Konzept lesen</a> &bull;
+        <a href="manifest.html">Manifest lesen</a> &bull;
         <a href="werkzeug.html">Werkzeug verstehen</a> &bull;
         <a href="bedienung.html">Bedienung planen</a> &bull;
-        <a href="faq.html"><b>Antworten finden</b></a>
+        <a href="faq.html" aria-current="page">Antworten finden</a>
       </div>
     </section>
 
@@ -710,15 +795,19 @@
       <span class="ls-footer-note">
         Verbindliche Angaben finden sich im Impressum.
       </span>
-      <nav class="ls-footer-nav">
-        <a href="impressum.html">Impressum &amp; Datenschutz</a>
-      </nav>
+      <div class="ls-symbol-footer-wrap">
+        <nav class="ls-footer-nav">
+          <a href="impressum.html">Impressum &amp; Datenschutz</a>
+        </nav>
+        <img class="ls-symbol-mark ls-symbol-footer" src="assets/images/lethesafe-symbol.svg" alt="" aria-hidden="true"
+          loading="lazy" />
+      </div>
       <span class="ls-footer-kontakt">
         Kontakt: <a href="mailto:kontakt@lethesafe.org">kontakt@lethesafe.org</a>
       </span>
     </div>
   </footer>
-  
+
 </body>
 
 </html>
