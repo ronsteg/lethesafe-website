@@ -489,6 +489,19 @@
     </section>
 
     <section>
+      <details class="ls-faq">
+        <summary>Was passiert, wenn ein laufender Rechenprozess abgebrochen wird?</summary>
+        <p>Lethesafe speichert keine Zwischenstände laufender Rechenprozesse.</p>
+        <p>Der aktuelle Berechnungszustand existiert ausschließlich im Arbeitsspeicher. Wird der Prozess beendet – durch
+          Nutzerinteraktion, Programmabbruch, Stromausfall oder Systemneustart – geht der gesamte Fortschritt verloren.
+        </p>
+        <p>Ein abgebrochener Rechenlauf kann nicht fortgesetzt werden und muss vollständig neu gestartet werden.</p>
+        <p>Dieses Verhalten ist absichtlich und Teil des Sicherheitsmodells. Jede persistente Speicherung von
+          Zwischenständen würde einen zusätzlichen Angriffspfad eröffnen und das Zeitprinzip untergraben.</p>
+      </details>
+    </section>
+
+    <section>
       <h2>Weitergabe, Redundanz & Zukunft</h2>
     </section>
 
@@ -600,7 +613,7 @@
         </p>
       </details>
     </section>
-    
+
 
     <section>
       <h2>Bedrohungsmodelle & Realität</h2>
