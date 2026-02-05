@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description"
+    content="Hinweise zur verantwortungsvollen Meldung sicherheitsrelevanter Beobachtungen rund um lethesafe-core." />
+
+  <title>Lethesafe – Sicherheit</title>
+  <link rel="canonical" href="https://lethesafe.org/security.html">
+  <link rel="alternate" hreflang="de" href="https://lethesafe.org/security.html">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="ls-header">
+    <div class="ls-header-inner">
+      <a class="ls-brand" href="index.html">Lethesafe<sup style="font-size:0.35em; opacity:0.6;">&trade;</sup></a>
+      <nav class="ls-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a href="problem.html">Problem</a>
+        <a href="manifest.html">Manifest</a>
+        <a href="werkzeug.html">Werkzeug</a>
+        <a href="bedienung.html">Bedienung</a>
+        <a href="faq.html">FAQ</a>
+        <a href="materialien.html">Materialien</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="ls-longform">
+    <section>
+      <div class="page-label">Lethesafe</div>
+      <h1>Sicherheit</h1>
+      <p class="page-lead">
+        Diese Seite richtet sich an Menschen, die in Ruhe, verantwortungsvoll und ohne öffentliche Diskussion auf
+        sicherheitsrelevante Beobachtungen aufmerksam machen möchten.
+      </p>
+      <p>
+        Lethesafe versteht Sicherheit als Teil des ursprünglichen Designs und nicht als nachträgliche Maßnahme.
+        Hinweise werden gehört, ohne daraus eine Einladung oder einen Wettbewerb zu machen.
+      </p>
+    </section>
+
+    <section>
+      <h2>Verantwortungsvolle Meldung</h2>
+      <p>
+        Beschreiben Sie die Beobachtung präzise, verzichten Sie auf unnötige Details und geben Sie an, wie sich die
+        Situation reproduzieren lässt. Es geht nicht um Schnelligkeit, sondern um Klarheit und Besonnenheit.
+      </p>
+      <p>
+        Bitte veröffentlichen Sie sicherheitsrelevante Informationen nicht vorab und verzichten Sie auf öffentliche
+        Drucksituationen. Diese Seite ist keine Bühne, sondern ein ruhiger Kontaktpunkt.
+      </p>
+    </section>
+
+    <section>
+      <h2>Geltungsbereich</h2>
+      <p>
+        Meldungen beziehen sich ausschließlich auf <strong>lethesafe-core</strong>, also den kryptografischen Kern und
+        seine referenzierte Implementierung. Infrastruktur von Dritten, Integrationen, Schnittstellen oder begleitende
+        Projekte fallen nicht unter diesen Rahmen.
+      </p>
+      <p>
+        Bitte klären Sie vor einer Meldung, ob Ihr Hinweis tatsächlich diesen Geltungsbereich berührt.
+      </p>
+    </section>
+
+    <section>
+      <h2>Designentscheidungen als Sicherheitsgrenze</h2>
+      <p>
+        Der Schutzraum von Lethesafe entsteht aus bewusster Selbstbegrenzung. Das Konzept verzichtet auf jede Form von
+        Sonderzugriff, und genau dieser Verzicht definiert die Sicherheitsgrenze.
+      </p>
+      <ul class="ls-list framed">
+        <li>keine Hintertüren</li>
+        <li>kein Reset</li>
+        <li>keine Passwort-Wiederherstellung</li>
+      </ul>
+      <p>
+        Wer eine Meldung einreicht, akzeptiert diese Grundlinie. Vorschläge für Ausnahmen, Abkürzungen oder geheime
+        Notzugänge fallen nicht unter Sicherheitsverbesserungen.
+      </p>
+    </section>
+
+    <section>
+      <h2>Was ausdrücklich keine Sicherheitslücke ist</h2>
+      <p>
+        Nicht alles, was unbequem erscheint, ist eine Schwachstelle. Folgende Punkte gelten als erwartetes Verhalten:
+      </p>
+      <ul class="ls-list framed">
+        <li>der Wunsch nach sofortigem Zugriff trotz gewählter Wartezeit</li>
+        <li>fehlende Wiederherstellungswege, nachdem Geheimnisse bewusst entfernt wurden</li>
+        <li>Bedauern über unumkehrbare Entscheidungen innerhalb des gewählten Zeitfensters</li>
+        <li>Fehleingaben oder Planungsfehler außerhalb des Kernsystems</li>
+      </ul>
+      <p>
+        Solche Situationen mögen als Problem empfunden werden, stellen aber keine Angriffsfläche für Lethesafe dar.
+      </p>
+    </section>
+
+    <section>
+      <h2>Kontakt</h2>
+      <p>
+        Hinweise senden Sie bitte an die folgende Adresse: security@lethesafe.org. Die Nachricht sollte alle
+        notwendigen Informationen enthalten, damit sie intern reproduzierbar ist.
+      </p>
+    </section>
+
+    <section>
+      <p>
+        Sicherheit bleibt eine stille Vereinbarung zwischen Menschen, Zeit und Verantwortung.
+      </p>
+    </section>
+
+  </main>
+
+
+  <footer class="ls-footer">
+    <div class="ls-footer-row">
+      <span class="ls-footer-note">
+        Verbindliche Angaben finden sich im Impressum.
+      </span>
+      <div class="ls-symbol-footer-wrap">
+        <nav class="ls-footer-nav">
+          <a href="impressum.html">Impressum &amp; Datenschutz</a><br>
+          <a href="security.html">Hinweise zur Meldung</a>
+        </nav>
+        <img class="ls-symbol-mark ls-symbol-footer" src="assets/images/lethesafe-symbol.svg" alt="" aria-hidden="true"
+          loading="lazy" />
+      </div>
+      <span class="ls-footer-kontakt">
+        Kontakt: <a href="mailto:kontakt@lethesafe.org">kontakt@lethesafe.org</a>
+      </span>
+    </div>
+  </footer>
+
+</body>
+
+</html>
